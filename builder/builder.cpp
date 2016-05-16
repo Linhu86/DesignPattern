@@ -48,7 +48,7 @@ Product *ConcreteBuilder::BuildStart()
     BuilderPartC();
     p_product = new ConcreteProductA("PA");
   }
-  else(m_buildseq == 2)
+  else if(m_buildseq == 2)
   {
     BuilderPartC();
     BuilderPartB();

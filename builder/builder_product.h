@@ -16,15 +16,14 @@ class Product
    virtual int getBuilderSequence() = 0;
 
   protected:
-    Product(string name) : m_name(name){
-        cout << "Constructing product : " << name << endl;
-    }
+    Product();
     string m_name;
 };
 
 class ConcreteProductA : public Product
 {
   public:
+    ConcreteProductA();
     ConcreteProductA(string name) : m_name(name){
         cout << "Constructing product : " << name << endl;
         m_buildseq = 1;
@@ -40,6 +39,7 @@ class ConcreteProductA : public Product
 class ConcreteProductB : public Product
 {
   public:
+    ConcreteProductB();
     ConcreteProductB(string name) : m_name(name){
         cout << "Constructing product : " << name << endl;
         m_buildseq = 2;

@@ -2,9 +2,15 @@
 #include <iostream>
 using namespace std;
 
+Product::Product()
+{
+  cout << "Constructing Product "<< endl;
+}
+
+
 Product::~Product()
 {
-  cout << "Deconstructing Product name " << m_name << endl;
+  cout << "Deconstructing Product name "<< endl;
 }
 
 
@@ -20,8 +26,14 @@ int ConcreteProductA::getBuilderSequence()
 
 ConcreteProductA::ConcreteProductA()
 {
+  cout << "Constructing ConcreteProduct " << m_name << endl;
+}
+
+ConcreteProductA::~ConcreteProductA()
+{
   cout << "Deconstructing ConcreteProduct " << m_name << endl;
 }
+
 
 string ConcreteProductB::getProductName()
 {
@@ -33,11 +45,15 @@ int ConcreteProductB::getBuilderSequence()
   return m_buildseq;
 }
 
-ConcreteProductB::ConcreteProductA()
+ConcreteProductB::ConcreteProductB()
+{
+  cout << "Constructing ConcreteProduct " << m_name << endl;
+}
+
+ConcreteProductB::~ConcreteProductB()
 {
   cout << "Deconstructing ConcreteProduct " << m_name << endl;
 }
-
 
 
 

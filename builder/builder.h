@@ -3,17 +3,19 @@
 
 #include <string>
 #include <iostream>
+#include "builder_product.h"
 using namespace std;
 
+class Product;
 
 class Builder
 {
   public:
-    ~Builder() = 0;
-    void BuilderPartA() = 0;
-    void BuilderPartB() = 0;
-    void BuilderPartC() = 0;
-    Product *BuildStart( ) = 0;
+    virtual ~Builder() = 0;
+    virtual void BuilderPartA() = 0;
+    virtual void BuilderPartB() = 0;
+    virtual void BuilderPartC() = 0;
+    virtual Product *BuildStart() = 0;
   protected:
     Builder();
 };
@@ -22,6 +24,7 @@ class Builder
 class ConcreteBuilder : public Builder
 {
   public:
+    ConcreteBuilder();
     ConcreteBuilder(int buildseq) : m_buildseq(buildseq)
     {
       cout << "ConcreteBuilder build product sequence " << buildseq << endl;
@@ -31,7 +34,7 @@ class ConcreteBuilder : public Builder
     void BuilderPartB();
     void BuilderPartC();
 
-    Product *BuildStart( );
+    Product *BuildStart();
     
     ~ConcreteBuilder();
   private:
