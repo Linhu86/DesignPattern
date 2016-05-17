@@ -13,35 +13,35 @@ AbstractionImp::~AbstractionImp()
   cout << "Deconstructing AbstractionImp" << endl;
 } 
 
-ConcreteAbstractImpA::ConcreteAbstractImpA()
+ConcreteAbstractionImpA::ConcreteAbstractionImpA()
 {
-  cout << "Constructing ConcreteAbstractImpA" << endl;
+  cout << "Constructing ConcreteAbstractionImpA" << endl;
 }
 
-ConcreteAbstractImpA::~ConcreteAbstractImpA()
+ConcreteAbstractionImpA::~ConcreteAbstractionImpA()
 {
-  cout << "Deonstructing ConcreteAbstractImpA" << endl;
+  cout << "Deonstructing ConcreteAbstractionImpA" << endl;
 }
 
-void ConcreteAbstractImpA::operation()
+void ConcreteAbstractionImpA::operation()
 {
-  cout << "ConcreteAbstractImpA operation" << endl;
+  cout << "ConcreteAbstractionImpA operation" << endl;
 }
 
 
-ConcreteAbstractImpB::ConcreteAbstractImpB()
+ConcreteAbstractionImpB::ConcreteAbstractionImpB()
 {
-  cout << "Constructing ConcreteAbstractImpB" << endl;
+  cout << "Constructing ConcreteAbstractionImpB" << endl;
 }
 
-ConcreteAbstractImpB::~ConcreteAbstractImpB()
+ConcreteAbstractionImpB::~ConcreteAbstractionImpB()
 {
-  cout << "Deonstructing ConcreteAbstractImpB" << endl;
+  cout << "Deonstructing ConcreteAbstractionImpB" << endl;
 }
 
-void ConcreteAbstractImpB::operation()
+void ConcreteAbstractionImpB::operation()
 {
-  cout << "ConcreteAbstractImpB operation" << endl;
+  cout << "ConcreteAbstractionImpB operation" << endl;
 }
 
 

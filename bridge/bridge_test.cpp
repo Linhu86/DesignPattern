@@ -6,11 +6,15 @@ class RefinedAbstraction;
 
 int main()
 {
-  AbstractionImp *p_impa = new ConcreteAbstractImpA();
+  AbstractionImp *p_impa = new ConcreteAbstractionImpA();
 
-  RefinedAbstraction *p_abs = new RefinedAbstraction(p_impa);
+  AbstractionImp *p_impb = new ConcreteAbstractionImpB();
+
+  RefinedAbstraction *p_abs = new RefinedAbstraction(p_impb);
 
   p_abs->operation();
+
+  delete p_abs;
    
   return 0;
 }

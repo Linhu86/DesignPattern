@@ -4,6 +4,7 @@
 
 class AbstractionImp;
 
+
 class Abstraction
 {
   public:
@@ -13,11 +14,11 @@ class Abstraction
     Abstraction();
 };
 
-class RefinedAbstration : public Abstraction
+class RefinedAbstraction : public Abstraction
 {
   public:
-    RefinedAbstration(AbstractionImp *imp);
-    ~RefinedAbstration();
+    RefinedAbstraction(AbstractionImp *imp);
+    ~RefinedAbstraction();
     void operation();
   private:
     AbstractionImp *m_imp;

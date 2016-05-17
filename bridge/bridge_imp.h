@@ -1,28 +1,28 @@
-#ifndef __BRIDGE_H__
-#define __BRIDGE_H__
+#ifndef __BRIDGE_IMP_H__
+#define __BRIDGE_IMP_H__
 
 class AbstractionImp
 {
   public:
-    virtual ~AbstractionImp();
+    virtual ~AbstractionImp() = 0;
     virtual void operation() = 0;
   protected:
     AbstractionImp();
 };
 
-class ConcreteAbstractImpA
+class ConcreteAbstractionImpA : public AbstractionImp
 {
   public:
-    ConcreteAbstractImpA();
-    ~ConcreteAbstractImpA();
+    ConcreteAbstractionImpA();
+    ~ConcreteAbstractionImpA();
     void operation();
 };
 
-class ConcreteAbstractImpB
+class ConcreteAbstractionImpB : public AbstractionImp
 {
   public:
-    ConcreteAbstractImpB();
-    ~ConcreteAbstractImpB();
+    ConcreteAbstractionImpB();
+    ~ConcreteAbstractionImpB();
     void operation();
 };
 
