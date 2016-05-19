@@ -3,14 +3,22 @@
 
 #include "component.h"
 
-class Leaf : public Component
-{
-  public:
-    Leaf();
-    ~Leaf();
-    void Operation();
-};
 
+class Leaf:public Component 
+{ 
+  public: 
+    Leaf(); 
+ 
+    ~Leaf(); 
+ 
+    void Operation(); 
+ 
+  protected: 
+ 
+  private: 
+ 
+}; 
+ 
 
 
 

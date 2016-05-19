@@ -1,23 +1,20 @@
-#include "component.h"
-#include "composite.h"
-#include "leaf.h"
+#include "component.h" 
+#include "composite.h" 
+#include "leaf.h" 
+#include <iostream> 
+using namespace std; 
+int main(int argc,char* argv[]) 
+{ 
+  Leaf* l = new Leaf(); 
+  l->Operation(); 
+  Composite* com = new Composite(); 
+  com->Add(l); 
+  com->Operation(); 
+  Component* ll = com->GetChild(0); 
+  ll->Operation(); 
+  return 0; 
+} 
 
-#include <iostream>
-
-using namespace std;
-
-int main()
-{
-  Leaf *l = new Leaf();
-  l->Operation();
-
-  Composite *com = new Composite();
-  com->Add(l);
-  com->Operation();
-  Component *l1 = com->GetChild(0);
-  l1->Operation();
-  return 0;
-}
 
 
 

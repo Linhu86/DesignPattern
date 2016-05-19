@@ -1,44 +1,44 @@
-#include "composite.h"
-#include "component.h"
+#include "composite.h" 
+#include "component.h" 
 
-#include <iostream>
-using namespace std;
-
-Composite::Composite()
-{
-  cout << "Constructing Composite." << endl;
+Composite::Composite() 
+{ 
 }
 
-Composite::~Composite()
-{
-  cout << "Deconstructing Composite." << endl;
+Composite::~Composite() 
+{ 
 }
 
+void Composite::Operation() 
+{ 
+  vector<Component*>::iterator comIter = comVec.begin(); 
+   
+  for (;comIter != comVec.end();comIter++) 
+  { 
+    (*comIter)->Operation(); 
+  } 
+} 
 
-void Composite::Operation()
-{
-  vector<Component *>::iterator comIter = comVec.begin();
-
-  for(; comIter != comVec.end(); comIter++)
-  {
-    (*comIter)->Operation();
-  }
-}
-
-void Composite::Add(Component *com)
-{
+void Composite::Add(Component* com) 
+{ 
   comVec.push_back(com); 
 }
 
-void Composite::Remove(Component *com)
+void Composite::Remove(Component* com) 
 {
-  comVec.erase(com);
+  vector<Component*>::iterator comIter = comVec.begin();
+  for(; comIter != comVec.end(); comIter++)
+  {
+    if(*comIter == com)
+    {
+      comVec.erase(comIter);
+    }
+  }
 }
 
-Component *Composite::GetChild(int index)
-{
-  return comVec[index];
-}
-
+Component* Composite::GetChild(int index) 
+{ 
+  return comVec[index];   
+} 
 
 

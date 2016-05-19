@@ -1,29 +1,31 @@
-#include "component.h"
-#include <iostream>
-using namespace std;
+#include "component.h" 
 
 Component::Component()
-{
-  cout << "Constructing Component" << endl;
-}
+{ 
+ 
+} 
+ 
+Component::~Component() 
+{ 
+ 
+} 
+ 
+void Component::Add(const Component& com) 
+{ 
+ 
+} 
+ 
+Component* Component::GetChild(int index) 
+{ 
+  return 0; 
+} 
+ 
+void Component::Remove(const Component& com) 
+{ 
+ 
+} 
 
-Component::~Component()
-{
-  cout << "Deconstructing Component" << endl;
-}
 
-void Component::Add(const Component &com)
-{  
-}
 
-void Component::Remove(const Component &com)
-{
-
-}
-
-Component* Component::GetChild(int index)
-{
-  return 0;
-}
 
 
