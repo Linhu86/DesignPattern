@@ -1,6 +1,9 @@
 #include "composite.h"
 #include "component.h"
 
+#include <iostream>
+using namespace std;
+
 Composite::Composite()
 {
   cout << "Constructing Composite." << endl;
