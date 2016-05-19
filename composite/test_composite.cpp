@@ -1,6 +1,5 @@
 #include "component.h"
 #include "composite.h"
-
 #include "leaf.h"
 
 #include <iostream>
@@ -13,7 +12,7 @@ int main()
   l->Operation();
 
   Composite *com = new Composite();
-  com->Add();
+  com->Add(l);
   com->Operation();
   Component *l1 = com->GetChild(0);
   l1->Operation();
